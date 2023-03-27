@@ -186,3 +186,35 @@ print(animalType.warmBlooded.rawValue)
 if let rawValue = animalType(rawValue: 0) {
     print("This is a rawValue : \(rawValue)")
 }
+
+/// Insert text into string
+var aString = ""
+aString.append("A String")
+
+
+/// Function
+
+func greeting(name : String) -> String {
+    let hi = "Hi, your name is \(name)"
+    return hi
+}
+
+greeting(name: "TH")
+
+func findMaxMin(numbers: [Int]) -> (max: Int,min: Int) {
+    var max = numbers[0]
+    var min = numbers[0]
+    
+    for n in numbers[1..<numbers.count] {
+        if n > max {
+            max = n
+        } else if n < min {
+            min = n
+        }
+    }
+    
+    return (max,min)
+}
+
+var maxMin = findMaxMin(numbers: [3,-1,4,-2,50])
+print("This is Max \(maxMin.max), This is Min \(maxMin.min)")
